@@ -1,12 +1,19 @@
 <script setup lang="ts">
 const name = ref("Stefan");
 const fullName = computed(() => `${name.value} Heim`);
+const route = useRoute();
 </script>
 
 <template>
   <div>
     <div>
       About {{ fullName }}
+    </div>
+    <div>
+      Auth required: {{ route.meta?.authRequired }}
+    </div>
+    <div>
+      Allow anonymous: {{ route.meta?.allowAnonymous }}
     </div>
     <div>
       <TheWelcome :name="'Hans'" />
@@ -16,3 +23,9 @@ const fullName = computed(() => `${name.value} Heim`);
 
 <style>
 </style>
+
+<route lang="yaml">
+meta:
+  authRequired: true
+  allowAnonymous: true
+</route>
