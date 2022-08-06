@@ -5,48 +5,49 @@ const route = useRoute();
 </script>
 
 <template>
-  <div>
-    <div>
-      Home {{ route.path }}
-    </div>
+  <div class="flex flex-col gap-4">
+    <TheHeader/>
+    <LocationItem/>
     <div>
       Auth required: {{ route.meta?.authRequired }}
     </div>
-    <div>
+    <div class="index__icons flex flex-wrap justify-center gap-2 items-center border border-gray-200 p-4 transition shadow hover:shadow-md">
       <IconFasArrowDown></IconFasArrowDown>
       <IconFasAddressBook></IconFasAddressBook>
       <IconFasArrowUp></IconFasArrowUp>
-      
-      <div class="big blue">
+
+      <div class="text-9xl text-blue-700">
         <IconFabWindows></IconFabWindows>
       </div>
-      
-      <div class="big blue">
+
+      <div class="text-9xl text-blue-700">
+        <component :is="IconFa6BrandsMicrosoft"></component>
+      </div>
+
+      <div class="text-9xl text-blue-700">
+        <component :is="IconFa6BrandsMicrosoft"></component>
+      </div>
+
+      <div class="text-9xl text-blue-700">
         <component :is="IconFa6BrandsMicrosoft"></component>
       </div>
     </div>
     <div>
-      <TheHeader/>
-    </div>
-    <div>
-      <TheWelcome name="Stefan" />
+      <TheWelcome name="Stefan"/>
     </div>
   </div>
 </template>
 
 <style>
-.big {
-  font-size: 3rem;
-}
-.blue {
-  color: steelblue;
+.index__icons svg {
+  @apply transition hover:scale-105 cursor-pointer;
 }
 </style>
 
 <route lang="json">
 {
-  "meta": {
-    "authRequired": true
-  }
+"meta": {
+"authRequired": true
+}
 }
 </route>

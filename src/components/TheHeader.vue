@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="text-4xl text-gray-500 font-bold">
     This is a header :)
   </div>
 </template>
