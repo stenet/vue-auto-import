@@ -14,7 +14,11 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style>
+html, body {
+  background-color: #efefef;
+}
+
 .app_links {
   display: flex;
   gap: 1rem;

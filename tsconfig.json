@@ -11,8 +11,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "~icons/*": ["./nodes-modules/@iconify/*"]
+    },
+    "types": [
+      "unplugin-icons/types/vue"
+    ]
   },
   "references": [
     {

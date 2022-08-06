@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import IconFa6BrandsMicrosoft from "~icons/fa6-brands/microsoft";
+
 const route = useRoute();
 </script>
 
@@ -11,6 +13,19 @@ const route = useRoute();
       Auth required: {{ route.meta?.authRequired }}
     </div>
     <div>
+      <IconFasArrowDown></IconFasArrowDown>
+      <IconFasAddressBook></IconFasAddressBook>
+      <IconFasArrowUp></IconFasArrowUp>
+      
+      <div class="big blue">
+        <IconFabWindows></IconFabWindows>
+      </div>
+      
+      <div class="big blue">
+        <component :is="IconFa6BrandsMicrosoft"></component>
+      </div>
+    </div>
+    <div>
       <TheHeader/>
     </div>
     <div>
@@ -18,6 +33,15 @@ const route = useRoute();
     </div>
   </div>
 </template>
+
+<style>
+.big {
+  font-size: 3rem;
+}
+.blue {
+  color: steelblue;
+}
+</style>
 
 <route lang="json">
 {
