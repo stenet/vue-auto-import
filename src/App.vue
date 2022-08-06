@@ -16,6 +16,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
 .app__nav a {
-  @apply text-blue-900 hover:text-blue-600;
-} 
+  @apply text-blue-900 dark:text-blue-100 hover:text-blue-600 hover:dark:text-blue-400;
+}
 </style>

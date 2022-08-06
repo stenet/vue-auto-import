@@ -6,3 +6,7 @@ html, body {
   @apply font-sans;
   font-size: 14px;
 }
+
+button {
+  @apply px-4 py-2 rounded-md text-blue-50 dark:text-blue-900 hover:text-white dark:hover:text-black bg-blue-900 dark:bg-blue-100 hover:bg-blue-700 dark:hover:bg-blue-300 cursor-pointer;
+}

@@ -2,6 +2,10 @@
 import IconFa6BrandsMicrosoft from "~icons/fa6-brands/microsoft";
 
 const route = useRoute();
+
+function toggleDark() {
+  document.querySelector(":root")!.classList.toggle("dark");
+}
 </script>
 
 <template>
@@ -11,7 +15,10 @@ const route = useRoute();
     <div>
       Auth required: {{ route.meta?.authRequired }}
     </div>
-    <div class="index__icons flex flex-wrap justify-center gap-2 items-center border border-gray-200 p-4 transition shadow hover:shadow-md">
+    <div>
+      <button @click="toggleDark()">Toggle dark-/light-mode</button>
+    </div>
+    <div class="index__icons flex flex-wrap justify-center gap-2 items-center p-4 transition bg-white dark:bg-gray-800 drop-shadow hover:drop-shadow-md">
       <IconFasArrowDown></IconFasArrowDown>
       <IconFasAddressBook></IconFasAddressBook>
       <IconFasArrowUp></IconFasArrowUp>
@@ -40,7 +47,7 @@ const route = useRoute();
 
 <style>
 .index__icons svg {
-  @apply transition hover:scale-105 cursor-pointer;
+  @apply transition hover:scale-105 hover:text-emerald-700 cursor-pointer;
 }
 </style>
 
